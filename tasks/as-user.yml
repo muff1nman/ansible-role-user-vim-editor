@@ -1,0 +1,16 @@
+---
+- name: Create vim directory
+  file:
+    state: directory
+    recurse: true
+    path: "{{desktop_user_vars.dir}}/.vim/autoload/"
+- name: Install plug.vim
+  copy:
+    src: plug.vim
+    dest: "{{desktop_user_vars.dir}}/.vim/autoload/plug.vim"
+
+- name: Install vimrc
+  copy:
+    src: vimrc
+    dest: "{{desktop_user_vars.dir}}/.vimrc"
+  notify: ["vimplug"]

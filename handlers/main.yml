@@ -1,0 +1,5 @@
+---
+- name: "vimplug"
+  command: |
+          vim +PlugInstall +qall
+  when: limited_internet is not defined

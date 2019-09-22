@@ -1,0 +1,10 @@
+call plug#begin('~/.vim/plugged')
+Plug 'lervag/vimtex', { 'for': ['tex', 'latex'] }
+Plug 'neovimhaskell/haskell-vim', { 'for': ['hs'] }
+Plug 'vmchale/dhall-vim', { 'for': ['dhall'] }
+Plug 'sbdchd/neoformat'
+call plug#end()
+au BufNewFile,BufRead Jenkinsfile setf groovy
+let g:vimtex_compiler_enabled = 0
+
+nnoremap <silent> <C-L> :Neoformat<CR>

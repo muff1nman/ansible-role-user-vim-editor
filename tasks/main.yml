@@ -1,0 +1,8 @@
+---
+- name: Setting up User Variables
+  discover_user_vars:
+    user: "{{ ansible_env.USER }}"
+  check_mode: no
+  register: desktop_user_vars
+- name: Running User Tasks
+  include_tasks: as-user.yml

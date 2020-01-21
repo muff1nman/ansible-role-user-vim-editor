@@ -3,8 +3,20 @@ Plug 'lervag/vimtex', { 'for': ['tex', 'latex'] }
 Plug 'neovimhaskell/haskell-vim', { 'for': ['hs'] }
 Plug 'vmchale/dhall-vim', { 'for': ['dhall'] }
 Plug 'sbdchd/neoformat'
+Plug 'google/vim-jsonnet', { 'for': ['jsonnet'] }
 call plug#end()
 au BufNewFile,BufRead Jenkinsfile setf groovy
 let g:vimtex_compiler_enabled = 0
+
+let g:neoformat_jsonnet_jsonnetfmt = {
+            \ 'exe': 'jsonnetfmt',
+            \ 'args': ['-'],
+            \ 'replace': 0,
+            \ 'stdin': 1,
+            \ 'no_append': 1
+            \ }
+
+let g:neoformat_enabled_jsonnet = ['jsonnetfmt']
+
 
 nnoremap <silent> <C-L> :Neoformat<CR>

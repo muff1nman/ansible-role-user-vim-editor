@@ -25,3 +25,5 @@ let g:neoformat_enabled_jsonnet = ['jsonnetfmt']
 
 nnoremap <silent> <C-L> :Neoformat<CR>
 nnoremap <silent> <C-H> :Neomake<CR>
+
+set foldnestmax=1

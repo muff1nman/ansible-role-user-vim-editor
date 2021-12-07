@@ -7,6 +7,7 @@ Plug 'sbdchd/neoformat'
 Plug 'google/vim-jsonnet', { 'for': ['jsonnet'] }
 Plug 'google/vim-maktaba'
 Plug 'bazelbuild/vim-bazel'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 au BufNewFile,BufRead Jenkinsfile setf groovy
 let g:vimtex_compiler_enabled = 0
@@ -21,6 +22,8 @@ let g:neoformat_jsonnet_jsonnetfmt = {
             \ }
 
 let g:neoformat_enabled_jsonnet = ['jsonnetfmt']
+
+let g:table_mode_corner='|'
 
 
 nnoremap <silent> <C-L> :Neoformat<CR>

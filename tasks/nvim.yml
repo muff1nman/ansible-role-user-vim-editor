@@ -1,0 +1,10 @@
+---
+- name: Create nvim directory
+  file:
+    state: directory
+    recurse: true
+    path: "{{desktop_user_vars.dir}}/.config/nvim/"
+- name: Install init.lua
+  copy:
+    src: nvim/init.lua
+    dest: "{{desktop_user_vars.dir}}/.config/nvim/init.lua"
